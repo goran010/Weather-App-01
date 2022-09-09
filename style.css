@@ -95,3 +95,14 @@ h3 {
   justify-self: start;
   align-self: start;
 }
+@media only screen 
+and (device-width: 414px) 
+and (device-height: 896px) 
+and (-webkit-device-pixel-ratio: 2) { 
+  .searchBar{
+    width: 100%;
+  }
+  .mainContent{
+    margin-top: 50%;
+  }
+}
