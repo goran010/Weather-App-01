@@ -90,10 +90,17 @@ h3 {
 .desc {
   font-size: 1rem;
 }
-.humidity {
+.humidityContainer
+{
   grid-area: humidity;
   justify-self: start;
   align-self: start;
+  width: 40%;
+  display: flex;
+}
+.humidityContainer>svg{
+  height: 1.5rem;
+  margin-right: 0.5rem;
 }
 @media only screen and (max-width: 700px) { 
   .searchBar{

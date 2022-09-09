@@ -1,8 +1,7 @@
 let place = "Rijeka",
-  longitude=5,
-  latitude=5,
-  temperature,
-  placeName;
+  longitude = 5,
+  latitude = 5,
+  temperature;
 
 //transforming string to cordinates
 const getCordinates = async () => {
@@ -28,15 +27,16 @@ const getWeatherData = async (place) => {
   await getCordinates(place);
   const response2 = await axios({
     method: "GET",
-    url:
-      `https://api.openweathermap.org/data/2.5/weather?lon=${longitude}&lat=${latitude}&APPID=4cc69aa395ba04c81f73c4eda531da19&units=metric`
+    url: `https://api.openweathermap.org/data/2.5/weather?lon=${longitude}&lat=${latitude}&APPID=4cc69aa395ba04c81f73c4eda531da19&units=metric`,
   });
   console.log(response2);
-  temperature = response2.data.main.temp.toFixed(1);
-  document.querySelector(".temperature").textContent = temperature+"°C";
-  document.querySelector(".cityName").textContent = place;
-  placeName = response2.data.name;
-
+  document.querySelector(".temperature").textContent =
+    response2.data.main.temp.toFixed(1) + "°C";
+  document.querySelector(".cityName").textContent = response2.data.name;
+  document.querySelector(".desc").textContent =
+    response2.data.weather[0].description;
+    document.querySelector(".humidity").textContent =
+    response2.data.main.humidity+"%";
 };
 getWeatherData(place);
 
@@ -45,5 +45,5 @@ document.querySelector("input").addEventListener("change", (e) => {
   place = e.target.value;
   getWeatherData(place);
   e.target.value = "";
-  console.log(place)
+  console.log(place);
 });
