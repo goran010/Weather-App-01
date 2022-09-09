@@ -104,7 +104,7 @@ h3 {
 }
 @media only screen and (max-width: 700px) { 
   .searchBar{
-    width: 100%;
+    width: 95%;
   }
   .mainContent{
     margin-top: 50%;
