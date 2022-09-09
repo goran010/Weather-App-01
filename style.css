@@ -81,7 +81,7 @@ h3 {
 }
 .temperatureContainer {
   grid-area: temperature;
-  font-size: 4rem;
+  font-size: 3rem;
   justify-self: center;
   display: flex;
   flex-direction: column;
