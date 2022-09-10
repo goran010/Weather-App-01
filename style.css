@@ -65,7 +65,7 @@ body {
   row-gap: 3rem;
 }
 
-h3 {
+h3,h4 {
   color: rgb(56, 56, 56);
 }
 .cityName {
