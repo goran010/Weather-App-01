@@ -1,6 +1,6 @@
 let place = "Rijeka",
-  longitude = 5,
-  latitude = 5,
+  longitude,
+  latitude,
   temperature;
 
 //transforming string to cordinates
@@ -33,10 +33,15 @@ const getWeatherData = async (place) => {
   document.querySelector(".temperature").textContent =
     response2.data.main.temp.toFixed(1) + "°C";
   document.querySelector(".cityName").textContent = response2.data.name;
-  document.querySelector(".desc").textContent =
+  document.querySelector(".desc").innerHTML =
     response2.data.weather[0].description;
-    document.querySelector(".humidity").textContent =
-    response2.data.main.humidity+"%";
+  let iconLink = response2.data.weather[0].icon;
+  console.log(iconLink);
+  document.querySelector("img").src = `icons/${iconLink}.png`;
+  document.querySelector(".humidity").textContent =
+    response2.data.main.humidity + "%";
+  document.querySelector(".pressure").textContent =
+    response2.data.main.pressure + " hPa";
 };
 getWeatherData(place);
 

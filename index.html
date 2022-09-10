@@ -29,19 +29,36 @@
       <h3 class="date">8.9.2022.</h3>
       <div class="temperatureContainer">
         <h1 class="temperature">19°C <span>°C</span></h1>
-        <h4 class="desc">stormy</h4>
+        <div class="descContainer">
+          <img class="icon" src="" alt="iconWeather" />
+          <h4 class="desc">stormy</h4>
+        </div>
       </div>
       <div class="humidityContainer">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+        <svg
+          fill="#4f4f4f"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 384 512"
+        >
           <path
             d="M192 496c97.2 0 176-78.8 176-176c0-74.1-102.3-230.6-150.9-300.7c-12.3-17.7-37.8-17.7-50.1 0C118.3 89.4 16 245.9 16 320c0 97.2 78.8 176 176 176zM112 320c0 44.2 35.8 80 80 80c8.8 0 16 7.2 16 16s-7.2 16-16 16c-61.9 0-112-50.1-112-112c0-8.8 7.2-16 16-16s16 7.2 16 16z"
           />
         </svg>
         <h3 class="humidity">86%</h3>
-
+      </div>
+      <div class="pressureContainer">
+        <svg
+          fill="#4f4f4f"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 640 512"
+        >
+          <path
+            d="M576 416L64 416c-17.7 0-32 14.3-32 32s14.3 32 32 32l512 0c17.7 0 32-14.3 32-32s-14.3-32-32-32zm22.6-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L512 274.7 512 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 210.7-41.4-41.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l96 96c12.5 12.5 32.8 12.5 45.3 0l96-96zm-320-45.3c-12.5-12.5-32.8-12.5-45.3 0L192 274.7 192 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 210.7L86.6 233.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l96 96c12.5 12.5 32.8 12.5 45.3 0l96-96c12.5-12.5 12.5-32.8 0-45.3z"
+          />
+        </svg>
+        <h3 class="pressure"></h3>
       </div>
     </div>
     <script src="app.js"></script>
   </body>
 </html>
-
