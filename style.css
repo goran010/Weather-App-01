@@ -114,9 +114,8 @@ h3 {
 }
 .pressureContainer {
   grid-area: pressure;
-  justify-self: end;
+  justify-self: center;
   align-self: start;
-  
   display: flex;
   padding-top: 2.5rem;
 }
